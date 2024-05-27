@@ -1,0 +1,56 @@
+/home/hanwen/workspace/C3/cmake-build-release/example/c3_example
+
+
+
+dataset name: city_state
+column name = state , type = string
+column name = city , type = string
+Writing binary file : ../../public_bi/HanwenDBs/dmv/state/binary/1_state.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/dmv/state/binary/2_city.bitmap
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 13
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 738834
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 736138
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 750666
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 751238
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 749606
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 736602
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 750518
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 748514
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 737126
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 745494
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 750530
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 751858
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 115646
+============ Results ============
+total_uncompressed: 232382959
+total_c3_compressed: 19990085
+total_bb_compressed: 31221264
+city_state C3 compression ratio improvement: 1.56184
+============ Hanwen ============
+================> savingrate: 0.359729
+total1_uncompressed: 73059774
+total1_bb_compressed: 9517959
+total1_c3_compressed: 551070
+================> savingrate1: 0.942102
+
+total2_uncompressed: 159323185
+total2_bb_compressed: 21703305
+total2_c3_compressed: 19439015
+================> savingrate2: 0.104329
+
+Process finished with exit code 0

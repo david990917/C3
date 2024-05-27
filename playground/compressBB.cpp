@@ -9,7 +9,8 @@ int main(int argc, char **argv) {
         datasets = {compressor.get_dataset(std::stoi(argv[1]))};
     }
     else{
-        datasets = c3_bench::datasets_public_bi_small;
+//        datasets = c3_bench::datasets_public_bi_small;
+        datasets = c3_bench::hanwen_datasets;
     }
 
     for(auto dataset: datasets){

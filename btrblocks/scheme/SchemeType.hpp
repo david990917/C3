@@ -1,8 +1,9 @@
 #ifndef BTRBLOCKS_SCHEMETYPE_H_
 #define BTRBLOCKS_SCHEMETYPE_H_
 // ------------------------------------------------------------------------------
-#include <cstdint>
 #include "SchemeSet.hpp"
+#include <cstdint>
+#include <map>
 // ------------------------------------------------------------------------------
 namespace btrblocks {
 // ------------------------------------------------------------------------------
@@ -26,6 +27,14 @@ enum class IntegerSchemeType : uint8_t {
   DICTIONARY_16 = 31,
   SCHEME_MAX = 32
 };
+
+const std::map<IntegerSchemeType, std::string> IntegerSchemeTypeToString {{IntegerSchemeType::UNCOMPRESSED, "UNCOMPRESSED"},
+                                                                          {IntegerSchemeType::ONE_VALUE, "ONE_VALUE"},
+                                                                          {IntegerSchemeType::DICT, "DICT"},
+                                                                          {IntegerSchemeType::RLE, "RLE"},
+                                                                          {IntegerSchemeType::PFOR, "PFOR"},
+                                                                          {IntegerSchemeType::BP, "BP"}};
+
 using IntegerSchemeSet = SchemeSet<IntegerSchemeType>;
 constexpr IntegerSchemeSet defaultIntegerSchemes() {
   return {IntegerSchemeType::UNCOMPRESSED, IntegerSchemeType::ONE_VALUE, IntegerSchemeType::DICT,

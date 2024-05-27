@@ -310,18 +310,20 @@ std::vector<std::vector<size_t>> C3Compressor::compress_table_c3(btrblocks::Rela
 		std::vector<btrblocks::Range> ranges, 
 		c3_bench::Dataset dataset,
 		std::vector<std::shared_ptr<c3::C3LoggingInfo>>& c3_rg_log_info,
-		std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info)
-		{
+                                                                 std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+                                                                 int                                                         hanwen_selection) {
 
 	finalized_schemes.clear();
 	original_c3_graph = nullptr;
+	std::cout << "ranges.size(): " << ranges.size() << std::endl;
 	c3_rg_log_info.resize(ranges.size());
 	bb_info.resize(ranges.size());
-	std::vector<std::vector<size_t>> rowgroup_col_sizes(ranges.size(), std::vector<size_t>(relation.columns.size()));
+	std::vector<std::vector<size_t>> rowgroup_col_sizes(ranges.size(), std::vector<size_t>(relation.columns.size())); // 每一个 rowgroup 里面都有全部的列
 	for(size_t rg_i=0; rg_i<ranges.size(); rg_i++){
 		c3_log_stream << "Compressing: " << dataset.dataset_name << "; Row Group " << rg_i << std::endl;
-		
-		auto compressed_cols = compress_rowGroup_c3(relation, ranges, rg_i, dataset, c3_rg_log_info, bb_info);
+		std::cout << "Compressing: " << dataset.dataset_name << "; Row Group " << rg_i << "; Columns = " << rowgroup_col_sizes[rg_i].size() << std::endl;
+
+		auto compressed_cols = compress_rowGroup_c3(relation, ranges, rg_i, dataset, c3_rg_log_info, bb_info, hanwen_selection);
 		for(int col_i=0; col_i<compressed_cols.size(); col_i++){
 			rowgroup_col_sizes[rg_i][col_i] = compressed_cols[col_i].size();
 		}
@@ -335,77 +337,79 @@ std::vector<std::vector<uint8_t>> C3Compressor::compress_rowGroup_c3(btrblocks::
 		int row_group_i, 
 		c3_bench::Dataset dataset,
 		std::vector<std::shared_ptr<c3::C3LoggingInfo>>& c3_rg_log_info,
-		std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info)
-		{
+                                                                     std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+                                                                     int                                                         hanwen_selection) {
 
 	switch(static_cast<RowGroupsShareScheme>(config.SHARE_ROW_GROUP_SCHEME)){
-		case RowGroupsShareScheme::None:{
-			std::vector<std::vector<uint8_t>> compressed_row_group;
+	case RowGroupsShareScheme::None: { // 目前我们使用的都是 none，直接执行
+		std::vector<std::vector<uint8_t>> compressed_row_group;
 
-			auto c3_start_time = std::chrono::steady_clock::now();
-			auto row_group = relation.getRowGroup(ranges[row_group_i]);
-			auto c3_end_time = std::chrono::steady_clock::now();
-			total_get_rg_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			auto c3_row_group = std::make_unique<c3::C3>(row_group);
+		auto c3_start_time = std::chrono::steady_clock::now();
+		auto row_group     = relation.getRowGroup(ranges[row_group_i]); // 提取块（所有的相关列）
+		auto c3_end_time   = std::chrono::steady_clock::now();          // 提取的时间
+		total_get_rg_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
 
-			// get BB schemes
-			c3_start_time = std::chrono::steady_clock::now();
-			c3_row_group->get_btrblocks_schemes_exact_ECR();
-			c3_end_time = std::chrono::steady_clock::now();
-			total_get_bb_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			// get C3 schemes
-			c3_start_time = std::chrono::steady_clock::now();
-			c3_row_group->get_compression_schemes(c3_log_stream);
-			c3_end_time = std::chrono::steady_clock::now();
-			total_get_c3_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			// compress
-			c3_start_time = std::chrono::steady_clock::now();
-			std::vector<std::vector<uint8_t>> compressed_columns = c3_row_group->compress(c3_log_stream);
-			c3_end_time = std::chrono::steady_clock::now();
-			total_compress_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			c3_rg_log_info[row_group_i] = c3_row_group->get_logging_info();
-			bb_info[row_group_i] = c3_row_group->btrBlocksSchemes;
-			return compressed_columns;
-		}
-		case RowGroupsShareScheme::ShareFinalized:{
-			
-			auto c3_start_time = std::chrono::steady_clock::now();
-			auto row_group = relation.getRowGroup(ranges[row_group_i]);
-			auto c3_end_time = std::chrono::steady_clock::now();
-			total_get_rg_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-	
-			auto c3_row_group = std::make_unique<c3::C3>(row_group);
-			
-			// get BB schemes
-			c3_start_time = std::chrono::steady_clock::now();
-			c3_row_group->get_btrblocks_schemes_exact_ECR();
-			c3_end_time = std::chrono::steady_clock::now();
-			total_get_bb_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			// // azim request: get string columns which are actually int
-			// auto int_cols = c3_row_group->get_numeric_string_columns();
-			// for(auto int_col: int_cols){
-			// 	if(c3_row_group->btrBlocksSchemes[int_col]->get_null_count() < relation.tuple_count){
-			// 		azim_numeric_string_columns_stream << dataset.dataset_name << "|" << relation.columns[int_col].name << "|" << extract_column_id(relation.columns[int_col].name) << std::endl;
-			// 	}
-			// }
+		auto c3_row_group = std::make_unique<c3::C3>(row_group);
 
-			// get C3 schemes
-			c3_start_time = std::chrono::steady_clock::now();				
-			c3_row_group->get_compression_schemes(c3_log_stream, true, false, finalized_schemes);
-			c3_end_time = std::chrono::steady_clock::now();
-			total_get_c3_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
-			
-			// store finalized schemes of first row group to reuse
-			if(row_group_i == 0){
-				finalized_schemes = c3_row_group->compressionSchemes;
-			}
-			
-			// compress
+		// get BB schemes
+		c3_start_time = std::chrono::steady_clock::now();
+		// 为每一列计算可能的压缩方案和压缩比,注意里面有 cascade compression
+		c3_row_group->get_btrblocks_schemes_exact_ECR();
+		c3_end_time = std::chrono::steady_clock::now();
+		total_get_bb_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		//		std::cout << "============" << std::endl;
+		// get C3 schemes
+		c3_start_time                  = std::chrono::steady_clock::now();
+		c3_row_group->hanwen_selection = hanwen_selection;
+		c3_row_group->get_compression_schemes(c3_log_stream); // 本质就是这两步骤：获取 compression schemes
+		c3_end_time = std::chrono::steady_clock::now();
+		total_get_c3_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		// compress
+		c3_start_time                                        = std::chrono::steady_clock::now();
+		std::vector<std::vector<uint8_t>> compressed_columns = c3_row_group->compress(c3_log_stream); // 进行压缩!!
+		c3_end_time                                          = std::chrono::steady_clock::now();
+		total_compress_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		c3_rg_log_info[row_group_i] = c3_row_group->get_logging_info();
+		bb_info[row_group_i]        = c3_row_group->btrBlocksSchemes;
+
+		return compressed_columns;
+	}
+	case RowGroupsShareScheme::ShareFinalized: {
+
+		auto c3_start_time = std::chrono::steady_clock::now();
+		auto row_group     = relation.getRowGroup(ranges[row_group_i]);
+		auto c3_end_time   = std::chrono::steady_clock::now();
+		total_get_rg_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		auto c3_row_group = std::make_unique<c3::C3>(row_group);
+
+		// get BB schemes
+		c3_start_time = std::chrono::steady_clock::now();
+		c3_row_group->get_btrblocks_schemes_exact_ECR();
+		c3_end_time = std::chrono::steady_clock::now();
+		total_get_bb_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		// // azim request: get string columns which are actually int
+		// auto int_cols = c3_row_group->get_numeric_string_columns();
+		// for(auto int_col: int_cols){
+		// 	if(c3_row_group->btrBlocksSchemes[int_col]->get_null_count() < relation.tuple_count){
+		// 		azim_numeric_string_columns_stream << dataset.dataset_name << "|" << relation.columns[int_col].name << "|" << extract_column_id(relation.columns[int_col].name) << std::endl;
+		// 	}
+		// }
+
+		// get C3 schemes
+		c3_start_time = std::chrono::steady_clock::now();
+		c3_row_group->get_compression_schemes(c3_log_stream, true, false, finalized_schemes);
+		c3_end_time = std::chrono::steady_clock::now();
+		total_get_c3_time += std::chrono::duration_cast<std::chrono::milliseconds>(c3_end_time - c3_start_time).count();
+
+		// store finalized schemes of first row group to reuse
+		if (row_group_i == 0) { finalized_schemes = c3_row_group->compressionSchemes; }
+
+		// compress
 			c3_start_time = std::chrono::steady_clock::now();				
 			std::vector<std::vector<uint8_t>> compressed_columns = c3_row_group->compress(c3_log_stream);
 			c3_end_time = std::chrono::steady_clock::now();
@@ -485,6 +489,7 @@ std::pair<btrblocks::Relation, std::vector<btrblocks::Range>> C3Compressor::get_
 	}
 
 	btrblocks::ColumnType typefilter;
+	std::cout << "typefilter: {" << static_cast<uint8_t>(typefilter) << "}" << std::endl;
 	if (dataset.typefilter.empty()) {
 		typefilter = btrblocks::ColumnType::UNDEFINED;
 	} else if (dataset.typefilter == "integer") {
@@ -700,6 +705,42 @@ int C3Compressor::compress_and_verify_c3(std::ofstream& log_stream, btrblocks::R
 		}
 	}	
 	return 0;
+}
+
+std::vector<std::vector<size_t>> C3Compressor::hanwen_compress_and_verify_c3(std::ofstream&                                              log_stream,
+                                                                             btrblocks::Relation&                                        relation,
+                                                                             std::vector<btrblocks::Range>                               ranges,
+                                                                             c3_bench::Dataset                                           dataset,
+                                                                             std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+                                                                             std::vector<std::shared_ptr<C3LoggingInfo>>&                c3_rg_log_info) {
+	finalized_schemes.clear();
+	original_c3_graph = nullptr;
+	std::vector<std::vector<size_t>> rowgroup_col_sizes(ranges.size(), std::vector<size_t>(relation.columns.size())); // 每一个 rowgroup 里面都有全部的列
+	//	std::vector<std::shared_ptr<C3LoggingInfo>>                c3_rg_log_info(ranges.size());
+	//	std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>> bb_info(ranges.size());
+	for (size_t rg_i = 0; rg_i < ranges.size(); rg_i++) {
+		log_stream << "Compressing: " << dataset.dataset_name << "; Row Group " << rg_i << std::endl;
+
+		auto compressed_cols = compress_rowGroup_c3(relation, ranges, rg_i, dataset, c3_rg_log_info, bb_info);
+		for (int col_i = 0; col_i < compressed_cols.size(); col_i++) {
+			rowgroup_col_sizes[rg_i][col_i] = compressed_cols[col_i].size();
+		}
+		auto decompressed_cols = C3Compressor::decompress_row_group(compressed_cols);
+
+		log_stream << "Verifying: " << dataset.dataset_name << "; Row Group " << rg_i << std::endl;
+		std::vector<btrblocks::InputChunk> original_chunks;
+		for (size_t col_i = 0; col_i < relation.columns.size(); col_i++) {
+			original_chunks.push_back(relation.getInputChunk(ranges[rg_i], 0, col_i));
+		}
+		for (int col_i = 0; col_i < decompressed_cols.size(); col_i++) {
+			size_t tuple_count = original_chunks[col_i].tuple_count;
+			if (!original_chunks[col_i].compareContents(
+			        decompressed_cols[col_i].data.data(), decompressed_cols[col_i].nullmap, decompressed_cols[col_i].tuple_count, decompressed_cols[col_i].requires_copy, col_i, rg_i)) {
+				return {{}};
+			}
+		}
+	}
+	return rowgroup_col_sizes;
 }
 
 int C3Compressor::compress_and_verify_c3_old(std::ofstream& log_stream, btrblocks::Relation& relation, std::vector<btrblocks::Range> ranges, c3_bench::Dataset dataset) {

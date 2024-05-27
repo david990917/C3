@@ -5,11 +5,7 @@ namespace c3{
 
 std::string CompressionScheme::print_log_header(){
     return std::string("C3scheme|") + 
-        "source_column|" + 
-        "target_column|" + 
-        "bb_source_ecr|" +  
-        "bb_target_ecr|" +  
-        "c3_source_ecr|" +  
+        "source_column|" + "target_column|" + "bb_source_ecr|" + "bb_target_ecr|" + "c3_source_ecr|" +
         "c3_target_ecr|" +  
         "estimated_bytes_saved_source|" + 
         "estimated_bytes_saved_target|" + 

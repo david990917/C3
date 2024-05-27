@@ -40,10 +40,21 @@ public:
 	std::vector<std::vector<size_t>> compress_btrblocks(btrblocks::Relation& relation, std::vector<btrblocks::Range> ranges, c3_bench::Dataset dataset, std::vector<std::vector<size_t>>& original_sizes);
 
 	void verify_or_die(bool verify, const std::string& filename, const std::vector<btrblocks::InputChunk>& input_chunks);
-	
-	std::vector<std::vector<size_t>> compress_table_c3(btrblocks::Relation& relation, std::vector<btrblocks::Range> ranges, c3_bench::Dataset dataset, std::vector<std::shared_ptr<c3::C3LoggingInfo>>& c3_rg_log_info, std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info);
-	
-	std::vector<std::vector<uint8_t>> compress_rowGroup_c3(btrblocks::Relation& relation, std::vector<btrblocks::Range> ranges, int row_group_i, c3_bench::Dataset dataset, std::vector<std::shared_ptr<c3::C3LoggingInfo>>& c3_rg_log_info, std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info);
+
+	std::vector<std::vector<size_t>> compress_table_c3(btrblocks::Relation&                                        relation,
+	                                                   std::vector<btrblocks::Range>                               ranges,
+	                                                   c3_bench::Dataset                                           dataset,
+	                                                   std::vector<std::shared_ptr<c3::C3LoggingInfo>>&            c3_rg_log_info,
+	                                                   std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+	                                                   int                                                         hanwen_selection = 0);
+
+	std::vector<std::vector<uint8_t>> compress_rowGroup_c3(btrblocks::Relation&                                        relation,
+	                                                       std::vector<btrblocks::Range>                               ranges,
+	                                                       int                                                         row_group_i,
+	                                                       c3_bench::Dataset                                           dataset,
+	                                                       std::vector<std::shared_ptr<c3::C3LoggingInfo>>&            c3_rg_log_info,
+	                                                       std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+	                                                       int                                                         hanwen_selection = 0);
 
 	std::pair<btrblocks::Relation, std::vector<btrblocks::Range>> get_btrblocks_relation(c3_bench::Dataset dataset);
     
@@ -76,11 +87,16 @@ public:
 	double total_get_c3_time = 0;
 	double total_compress_time = 0;
 
-	private:
-		std::vector<std::shared_ptr<c3::CompressionScheme>> finalized_schemes;
-		std::shared_ptr<CorrelationGraph> original_c3_graph = nullptr;
+public:
+	std::vector<std::shared_ptr<c3::CompressionScheme>> finalized_schemes;
+	std::shared_ptr<CorrelationGraph> original_c3_graph = nullptr;
 
-
+	std::vector<std::vector<size_t>> hanwen_compress_and_verify_c3(std::ofstream&                                              log_stream,
+	                                                               btrblocks::Relation&                                        relation,
+	                                                               std::vector<btrblocks::Range>                               ranges,
+	                                                               c3_bench::Dataset                                           dataset,
+	                                                               std::vector<std::vector<std::shared_ptr<c3::ColumnStats>>>& bb_info,
+	                                                               std::vector<std::shared_ptr<C3LoggingInfo>>&                c3_rg_log_info);
 };
 
 } // namespace c3

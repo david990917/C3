@@ -100,13 +100,14 @@ void convertCSV(const string csv_path, const YAML::Node &schema, const string &o
                      const bool is_set = (column_str.size() == 0 || column_str == "null") ? 0 : 1;
                      column_descriptor.set_bitmap.push_back(is_set);
                      // -------------------------------------------------------------------------------------
-                     const INTEGER value = (is_set ? std::stoi(column_str) : NULL_CODE);
-                     die_if(is_set || value == NULL_CODE);
-                     integer_vectors[column_descriptor.vector_offset].push_back(value);
-                     // -------------------------------------------------------------------------------------
-                     // Update stats
-                     column_descriptor.null_count += !is_set;
-                     column_descriptor.empty_count += (value == 0) ? 1 : 0;
+					 //					 					 const INTEGER value = (is_set ? std::stoul(column_str) : NULL_CODE);
+					 const INTEGER value = (is_set ? std::stoi(column_str) : NULL_CODE);
+					 die_if(is_set || value == NULL_CODE);
+					 integer_vectors[column_descriptor.vector_offset].push_back(value);
+					 // -------------------------------------------------------------------------------------
+					 // Update stats
+					 column_descriptor.null_count += !is_set;
+					 column_descriptor.empty_count += (value == 0) ? 1 : 0;
                      break;
                   }
                   case ColumnType::DOUBLE: {
@@ -159,15 +160,15 @@ void convertCSV(const string csv_path, const YAML::Node &schema, const string &o
          // -------------------------------------------------------------------------------------
          // Write Bitmap
          const string output_column_bitmap_file = output_column_file + ".bitmap";
-         writeBinary(output_column_bitmap_file.c_str(), column_descriptor.set_bitmap);
-         // -------------------------------------------------------------------------------------
-         switch ( column_descriptor.column_type ) {
-            case ColumnType::INTEGER: {
+		 writeBinary(output_column_bitmap_file.c_str(), column_descriptor.set_bitmap);
+		 // -------------------------------------------------------------------------------------
+		 switch (column_descriptor.column_type) {
+		 case ColumnType::INTEGER: {
                output_column_file += ".integer";
                die_if(integer_vectors[column_descriptor.vector_offset].size() == column_descriptor.set_bitmap.size());
-               writeBinary(output_column_file.c_str(), integer_vectors[column_descriptor.vector_offset]);
-               break;
-            }
+			   writeBinary(output_column_file.c_str(), integer_vectors[column_descriptor.vector_offset]);
+			   break;
+		 }
             case ColumnType::DOUBLE: {
                output_column_file += ".double";
                writeBinary(output_column_file.c_str(), double_vectors[column_descriptor.vector_offset]);

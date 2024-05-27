@@ -1,0 +1,1114 @@
+/home/hanwen/workspace/C3/cmake-build-release/example/c3_example
+
+
+
+dataset name: pickup-dropoff
+column name = pickup , type = integer
+column name = dropoff , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/taxi/binary/1_pickup.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/taxi/binary/1_pickup.integer
+Writing binary file : ../../public_bi/HanwenDBs/taxi/binary/2_dropoff.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/taxi/binary/2_dropoff.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 40
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2480127
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2480175
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479735
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357103
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479671
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479895
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357095
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356911
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479615
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356827
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355215
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356707
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355027
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356547
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356495
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356868
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355091
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356975
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356923
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355539
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479735
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357119
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357099
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479607
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2479615
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357071
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2357035
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356763
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356067
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355647
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356751
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356791
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356595
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355895
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2355967
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356575
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356608
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356719
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 2356543
+CompressionSchemes.size() = 1
+Numerical: src 0 and target 1; bytes saved source: 0; bytes saved target: 1471231
+============ Results ============
+total_uncompressed: 316992504
+total_c3_compressed: 226324316
+total_bb_compressed: 307734392
+pickup-dropoff C3 compression ratio improvement: 1.35971
+============ Hanwen ============
+================> savingrate: 0.264547
+total1_uncompressed: 158496252
+total1_bb_compressed: 153867196
+total1_c3_compressed: 153868196
+================> savingrate1: -6.49911e-06
+
+total2_uncompressed: 158496252
+total2_bb_compressed: 153867196
+total2_c3_compressed: 72456120
+================> savingrate2: 0.5291
+
+
+
+dataset name: commitdate_shipdate
+column name = date , type = integer
+column name = shipdate , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 60
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231871
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231824
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232452
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231644
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232360
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232076
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232084
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232308
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231976
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231492
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232740
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232484
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232496
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232204
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231904
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232720
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232076
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231808
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231652
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232304
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232516
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231784
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231776
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232264
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231668
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232172
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232244
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232004
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232828
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232092
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231768
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231528
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232288
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232192
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232624
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232299
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232648
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232292
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232640
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232292
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231996
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231820
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231940
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232436
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231884
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231928
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232016
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232012
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232204
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231932
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231884
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231492
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231828
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231967
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231708
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231732
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231972
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1231952
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1232656
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1215492
+============ Results ============
+total_uncompressed: 479888416
+total_c3_compressed: 154785524
+total_bb_compressed: 182041648
+commitdate_shipdate C3 compression ratio improvement: 1.17609
+============ Hanwen ============
+================> savingrate: 0.149725
+total1_uncompressed: 239944208
+total1_bb_compressed: 90878519
+total1_c3_compressed: 92356304
+================> savingrate1: -0.0162611
+
+total2_uncompressed: 239944208
+total2_bb_compressed: 91163129
+total2_c3_compressed: 62429220
+================> savingrate2: 0.315192
+
+
+
+dataset name: receiptdate_shipdate
+column name = date , type = integer
+column name = shipdate , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 60
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233552
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233936
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233776
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233660
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233703
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234048
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233756
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233800
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233747
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234012
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234108
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233892
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233264
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233684
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233760
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233876
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234043
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234256
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233772
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233356
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234192
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233320
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233892
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233980
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1232920
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233796
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233696
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233719
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233792
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233711
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233960
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233240
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233796
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233448
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233948
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233912
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234512
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233868
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233724
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233972
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234204
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233172
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233704
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234352
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233591
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233660
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233852
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234232
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233184
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233552
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233804
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233527
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233720
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233640
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1232904
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233432
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233772
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1233692
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1234204
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1217164
+============ Results ============
+total_uncompressed: 479888416
+total_c3_compressed: 132363708
+total_bb_compressed: 182402471
+receiptdate_shipdate C3 compression ratio improvement: 1.37804
+============ Hanwen ============
+================> savingrate: 0.274332
+total1_uncompressed: 239944208
+total1_bb_compressed: 91238845
+total1_c3_compressed: 39976508
+================> savingrate1: 0.561848
+
+total2_uncompressed: 239944208
+total2_bb_compressed: 91163626
+total2_c3_compressed: 92387200
+================> savingrate2: -0.0134217
+
+
+
+dataset name: city_zip
+column name = city , type = string
+column name = zip , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/1_city.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/2_zip.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/2_zip.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 122
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1285730
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1478198
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1407466
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1347878
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1382086
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1333738
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1457990
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1432562
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1247564
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1504222
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1321342
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1384602
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1477586
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1249218
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1412010
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1433118
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1312306
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1453342
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1359878
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1396182
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1383842
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1439182
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1266986
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1262966
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1549294
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1311282
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1342682
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1433538
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1373114
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1395090
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1335858
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1445074
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1275018
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1386726
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1417846
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1275086
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1487510
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1409374
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1273742
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1333934
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1434126
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1404462
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1420942
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1298646
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1335750
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244364
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1455386
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1384138
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1342926
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1396726
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1258746
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1273394
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1311438
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1420838
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1359438
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1494266
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1408542
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1320118
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1539522
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1420734
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1582010
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1384414
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1440118
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1248590
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1335786
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1405662
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1310150
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1433554
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1457070
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1320542
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1515970
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1384086
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1396734
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1332290
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1333466
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1393582
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1420986
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1406522
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1297138
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1360150
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1369430
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1371174
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1480966
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1381570
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1348374
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1437054
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1384678
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1469694
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1323226
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1361138
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1427298
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1396570
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1347458
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1420990
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1417194
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1485742
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1311718
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1489034
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1311242
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1382598
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1359226
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1299958
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1411422
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1360138
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1432862
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1323882
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1283186
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1506342
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1311650
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1549174
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1409166
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1347018
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1480818
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1262922
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1287246
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1493530
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1372038
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1372190
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1429786
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1357662
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1371930
+CompressionSchemes.size() = 1
+Dict_1to1: src 1 and target 0; bytes saved source: 0; bytes saved target: 1098414
+============ Results ============
+total_uncompressed: 2080296658
+total_c3_compressed: 265680424
+total_bb_compressed: 407483655
+city_zip C3 compression ratio improvement: 1.53374
+============ Hanwen ============
+================> savingrate: 0.347997
+total1_uncompressed: 1593231818
+total1_bb_compressed: 218479208
+total1_c3_compressed: 89284328
+================> savingrate1: 0.591337
+
+total2_uncompressed: 487064840
+total2_bb_compressed: 189004447
+total2_c3_compressed: 176396096
+================> savingrate2: 0.0667093
+
+Process finished with exit code 0
+
+
+/home/hanwen/workspace/C3/cmake-build-release/example/c3_example
+
+
+
+dataset name: commitdate_shipdate
+column name = date , type = integer
+column name = shipdate , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/1_date.integer
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/tpch/binary/2_shipdate.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 60
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227276
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226924
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227536
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226936
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227063
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227004
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227264
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227728
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227364
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226724
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227044
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226792
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227172
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227164
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227288
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227452
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226832
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227452
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226688
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227332
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227448
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226684
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226900
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226680
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226268
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227216
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227276
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227356
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227480
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227080
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227120
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226460
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227172
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227404
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227144
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227756
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227804
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226984
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227420
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227528
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226708
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226672
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227344
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227468
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226996
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227060
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227304
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227152
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227544
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1227152
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226408
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226568
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226632
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226472
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226920
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226328
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226984
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226896
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1226876
+CompressionSchemes.size() = 1
+DFOR: src 1 and target 0; bytes saved source: 0; bytes saved target: 1210716
+============ Results ============
+total_uncompressed: 479888416
+total_c3_compressed: 154824664
+total_bb_compressed: 182041648
+commitdate_shipdate C3 compression ratio improvement: 1.17579
+============ Hanwen ============
+================> savingrate: 0.14951
+total1_uncompressed: 239944208
+total1_bb_compressed: 90878519
+total1_c3_compressed: 62437808
+================> savingrate1: 0.312953
+
+total2_uncompressed: 239944208
+total2_bb_compressed: 91163129
+total2_c3_compressed: 92386856
+================> savingrate2: -0.0134235
+
+Process finished with exit code 0
+
+
+
+/home/hanwen/workspace/C3/cmake-build-release/example/c3_example
+
+
+
+dataset name: city_zip
+column name = city , type = string
+column name = zip , type = integer
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/1_city.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/2_zip.bitmap
+Writing binary file : ../../public_bi/HanwenDBs/dmv/binary/2_zip.integer
+typefilter: { }
+[Hanwen] block_size: 1000000
+[Hanwen] After processing: 122
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235648
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1242432
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235624
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237580
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244100
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237808
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237084
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235820
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1247564
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1256376
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235284
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236024
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1256600
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1234516
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1250328
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237684
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235572
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1249392
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237120
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236156
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237228
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1254524
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1248440
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236652
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255296
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1234552
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1248260
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237672
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235612
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1252668
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236860
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235556
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237164
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1247304
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255876
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236300
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255584
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1234108
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1247928
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235459
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236164
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1254628
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235919
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235476
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237284
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244364
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1257671
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237028
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255168
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1113092
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244388
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235840
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235896
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1253299
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236128
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235268
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236827
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1120360
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1257680
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236608
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1253839
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235688
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1246264
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235464
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236348
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1248464
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235820
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236488
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236144
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1239960
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1256580
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236548
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1250432
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1248620
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236128
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244648
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237408
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1244452
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237520
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237296
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235680
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237964
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1257296
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236620
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236884
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1133852
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1233964
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1250428
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237100
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235764
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1250680
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237076
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235624
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237212
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255860
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1248864
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236068
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255864
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1234020
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1246892
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237948
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235972
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1253416
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236036
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235775
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237516
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1245400
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1256836
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236496
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1255048
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1111632
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1247120
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236032
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236076
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1253600
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236348
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1235536
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1237084
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1245300
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1256912
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 1236692
+CompressionSchemes.size() = 1
+DFOR: src 0 and target 1; bytes saved source: 0; bytes saved target: 959920
+============ Results ============
+total_uncompressed: 2080296658
+total_c3_compressed: 409556268
+total_bb_compressed: 407483655
+city_zip C3 compression ratio improvement: 0.994939
+============ Hanwen ============
+================> savingrate: -0.00508637
+total1_uncompressed: 1593231818
+total1_bb_compressed: 218479208
+total1_c3_compressed: 194545636
+================> savingrate1: 0.109546
+
+total2_uncompressed: 487064840
+total2_bb_compressed: 189004447
+total2_c3_compressed: 215010632
+================> savingrate2: -0.137596
+
+Process finished with exit code 0

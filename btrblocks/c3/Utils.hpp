@@ -8,10 +8,10 @@ struct C3Config{
     int       C3_WINDOW_SIZE                  = 100;
     double    BYTES_SAVED_MARGIN              = 0.01;
     bool      C3_GRAPH_SHARE_SOURCE_NODES     = true;
-    bool      REVERT_BB_IF_C3_BAD             = true; // changed
-    bool      USE_PRUNING_RULES               = true; // changed
-    bool      FINALIZE_GRAPH_RESORT_EDGES     = false;
-    bool      USE_RANDOM_GENERATOR_SAMPLES    = false;
+	bool      REVERT_BB_IF_C3_BAD             = false; // changed
+	bool      USE_PRUNING_RULES               = false; // changed
+	bool      FINALIZE_GRAPH_RESORT_EDGES     = false;
+	bool      USE_RANDOM_GENERATOR_SAMPLES    = false;
     bool      IGNORE_BB_ECR                   = false; // changed
 
     // 327	655	3276	6553	16384	32768	49152	65536
@@ -19,19 +19,19 @@ struct C3Config{
     int C3_SAMPLE_RUN_SIZE    = 1;
 
     //---------- SCHEME CONFIG ----------//
-    bool ENABLE_EQUALITY      = true;
-    bool ENABLE_DICT_1TO1     = true;
-    bool ENABLE_DICT_1TON     = true;
-    bool ENABLE_NUMERICAL     = true;
-    bool ENABLE_DFOR          = true;
-    bool ENABLE_DICT_SHARING  = true;
+	bool ENABLE_EQUALITY     = true;
+	bool ENABLE_DICT_1TO1    = true;
+	bool ENABLE_DICT_1TON    = true;
+	bool ENABLE_NUMERICAL    = true;
+	bool ENABLE_DFOR         = true;
+	bool ENABLE_DICT_SHARING = true;
 
-    double DICT_EXCEPTION_RATIO_THRESHOLD     = 0.10;
-    double EQUALITY_EXCEPTION_RATIO_THRESHOLD = 0.10;
+	double DICT_EXCEPTION_RATIO_THRESHOLD     = 0.10;
+	double EQUALITY_EXCEPTION_RATIO_THRESHOLD = 0.10;
 
-    // 255 = autoscheme(); 0 = Uncompressed; 5 = BP; 4 = PFOR
-    int DICTIONARY_COMPRESSION_SCHEME         = 0; 
-    int DICTIONARY_CODES_COMPRESSION_SCHEME   = 5;
+	// 255 = autoscheme(); 0 = Uncompressed; 5 = BP; 4 = PFOR
+	int DICTIONARY_COMPRESSION_SCHEME         = 0;
+	int DICTIONARY_CODES_COMPRESSION_SCHEME   = 5;
     int EXCEPTION_COMPRESSION_SCHEME          = 0;
     int DFOR_CODES_COMPRESSION_SCHEME         = 5;
     int NUMERICAL_CODES_COMPRESSION_SCHEME    = 5;

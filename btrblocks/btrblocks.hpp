@@ -21,26 +21,30 @@ enum class SchemeSelection : uint8_t { SAMPLE, TRY_ALL };
 // ------------------------------------------------------------------------------
 struct BtrBlocksConfig {
   // clang-format off
-  size_t block_size{65536};                            // max tuples in a single block
-  uint32_t sample_size{65536};                            // run size of each sample
+
+//  size_t block_size{65536};                            // max tuples in a single block
+//  uint32_t sample_size{65536};                            // run size of each sample
+
+  size_t block_size{1000000};                         // max tuples in a single block -> Hanwen Change to 1M
+  uint32_t sample_size{1000000};                      // run size of each sample -> Hanwen Change to 1M
   uint32_t sample_count{1};                           // number of samples to take
 
   struct {
     IntegerSchemeSet schemes{defaultIntegerSchemes()}; // enabled integer schemes
     IntegerSchemeType override_scheme{autoScheme()};   // force using this scheme for integer columns
-    uint8_t max_cascade_depth{1};                      // maximum recursive compression calls
+    uint8_t max_cascade_depth{0};                      // maximum recursive compression calls
   } integers;
 
   struct {
     DoubleSchemeSet schemes{defaultDoubleSchemes()};   // enabled double schemes
     DoubleSchemeType override_scheme{autoScheme()};    // force using this scheme for double columns
-    uint8_t max_cascade_depth{1};                      // maximum recursive compression calls
+    uint8_t max_cascade_depth{0};                      // maximum recursive compression calls
   } doubles;
 
   struct {
     StringSchemeSet schemes{defaultStringSchemes()};   // enabled string schemes
     StringSchemeType override_scheme{autoScheme()};    // force using this scheme for string columns
-    uint8_t max_cascade_depth{1};                      // maximum recursive compression calls
+    uint8_t max_cascade_depth{0};                      // maximum recursive compression calls
   } strings;
   // clang-format on
 

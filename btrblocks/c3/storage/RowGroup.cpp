@@ -98,6 +98,7 @@ void RowGroup::init_samples() {
 			}
 		}
 	}
+	//	std::cout << "Sample Size: " << samples.size() << std::endl;
 }
 
 } // namespace c3

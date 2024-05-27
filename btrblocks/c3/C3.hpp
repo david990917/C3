@@ -76,13 +76,14 @@ private:
 	double numerical_compress_time = 0; 
 	double dfor_compress_time = 0; 
 
-	int equality_counter = 0; 
-	int dict_counter = 0; 
-	int dict_1toN_counter = 0; 
-	int numerical_counter = 0; 
-	int dfor_counter = 0; 
-	
+	int equality_counter = 0;
+	int dict_counter      = 0;
+	int dict_1toN_counter = 0;
+	int numerical_counter = 0;
+	int dfor_counter      = 0;
 
+public:
+	int  hanwen_selection = 0;
 	void get_ignore_columns();
 
 	void force_compression_schemes(std::vector<std::shared_ptr<c3::CompressionScheme>> schemes);
@@ -96,6 +97,14 @@ private:
 
 	void graph_given_find_correlations(std::shared_ptr<CorrelationGraph> given_graph);
 
+	void hanwen_force_compression_schemes();
+	void hanwen_find_dict1toN_correlation(int i, int j);
+	void hanwen_find_equality_correlation(int i, int j);
+	void hanwen_find_dict1to1_correlation(int i, int j);
+	void hanwen_find_numerical_correlation(int i, int j);
+	void hanwen_find_dfor_correlation(int i, int j);
+	void hanwen_find_dictShare_correlation(int i, int j);
+	void hanwen_find_correlations(int hanwen_selection = 0);
 };
 
 } // namespace c3

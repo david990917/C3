@@ -8,6 +8,7 @@ namespace c3_bench {
 
 inline std::string public_bi_path = "../../public_bi/";
 inline std::string public_bi_small_path = public_bi_path + "PublicBIbenchmark_small/";
+inline std::string hanwen_dataset_path  = public_bi_path + "HanwenDBs/";
 inline std::string result_path = public_bi_path + "result/";
 
 struct Dataset {
@@ -39,6 +40,12 @@ struct paths {
 	std::string stats_file_out = public_bi_small_path; // "../public_bi/";
 	std::string schema_yaml_in = public_bi_small_path; // "../public_bi/";
 	std::string table_csv_in   = public_bi_small_path; // "../public_bi/";
+
+	std::string hanwen_btr_dir_out    = hanwen_dataset_path; // "../public_bi/";
+	std::string hanwen_binary_dir_out = hanwen_dataset_path; // "../public_bi/";
+	std::string hanwen_stats_file_out = hanwen_dataset_path; // "../public_bi/";
+	std::string hanwen_schema_yaml_in = hanwen_dataset_path; // "../public_bi/";
+	std::string hanwen_table_csv_in   = hanwen_dataset_path; // "../public_bi/";
 
 	explicit paths() {
 		if (auto v = std::getenv("BTR_OUTPUT_DIRECTORY")) { btr_dir_out = v; }

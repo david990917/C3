@@ -21,7 +21,7 @@ SpacesInConditionalStatement: false
 AllowShortLambdasOnASingleLine: Inline
 AllowShortLoopsOnASingleLine: false
 AlwaysBreakTemplateDeclarations: Yes
-ColumnLimit: 120
+ColumnLimit: 200
 IncludeBlocks: Merge
 SortIncludes: CaseSensitive
 Language: Cpp

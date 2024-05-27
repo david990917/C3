@@ -33,12 +33,14 @@ void Relation::addColumn(const string& column_file_path) {
 	verifyTupleCounts();
 }
 
+// 将 data 分散至各个 blocks 中，每个 block 的大小是 block_size
 vector<Range> Relation::getRanges(btrblocks::SplitStrategy strategy, u32 max_chunk_count) const {
 	auto& cfg = BtrBlocksConfig::get();
 
 	// Build all possible ranges
 	vector<Range> ranges; // (start_index, length)
 
+	std::cout << "[Hanwen] block_size: " << cfg.block_size << std::endl;
 	for (u64 offset = 0; offset < tuple_count; offset += cfg.block_size) {
 		u64 chunk_tuple_count;
 		if (offset + cfg.block_size >= tuple_count) {
@@ -48,7 +50,9 @@ vector<Range> Relation::getRanges(btrblocks::SplitStrategy strategy, u32 max_chu
 		}
 		ranges.emplace_back(offset, chunk_tuple_count);
 	}
-	if (strategy == SplitStrategy::RANDOM) {
+
+	std::cout << "[Hanwen] After processing: " << ranges.size() << std::endl;
+	if (strategy == SplitStrategy::RANDOM) { // 这操作和我没什么关系
 		std::shuffle(ranges.begin(), ranges.end(), std::mt19937(std::random_device()()));
 		cout << std::get<0>(ranges[0]) << endl;
 	}
