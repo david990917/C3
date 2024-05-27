@@ -1,0 +1,5 @@
+columns:
+  - name: pickup
+    type: integer
+  - name: dropoff
+    type: integer

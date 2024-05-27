@@ -1,0 +1,5 @@
+columns:
+  - name: location
+    type: integer
+  - name: ip
+    type: integer

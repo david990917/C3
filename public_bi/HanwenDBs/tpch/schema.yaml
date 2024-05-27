@@ -1,0 +1,5 @@
+columns:
+  - name: date
+    type: integer
+  - name: shipdate
+    type: integer

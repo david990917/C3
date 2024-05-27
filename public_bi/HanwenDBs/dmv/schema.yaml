@@ -1,0 +1,5 @@
+columns:
+  - name: city
+    type: string
+  - name: zip
+    type: integer
